@@ -10,10 +10,9 @@ from app.models import (NewPetition, PetitionStatus, Like, UserInfo, PetitionToG
 from app.managers.petition_manager import PetitionManager
 from app.managers.statistics_manager import StatisticsManager
 
-from app.db import DataBase
+from app.db import db
 from app.config import host, port, user, database, password
 
-db = DataBase(host, port, user, database, password)
 petition_manager = PetitionManager(db)
 statistics_manager = StatisticsManager(db)
 
