@@ -1,4 +1,6 @@
 from pymongo import MongoClient
 
-client = MongoClient('mongodb://localhost:27017/')
+from app.config import settings
+
+client = MongoClient(settings.DB_HOST)
 db = client['Petitions']
